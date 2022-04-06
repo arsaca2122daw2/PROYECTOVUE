@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>SUDOKU.</h1>
+    <Puntuaciones msg="Welcome to Your Vue.js App"/>
+    <Botones/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Puntuaciones from './components/puntuaciones.vue'
+//import Sudoku from './components/sudoku.vue'
+import Botones from './components/botones.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Puntuaciones, Botones
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@font-face {
+	font-family: FUENTE;
+	src: url("assets/go3v2.ttf");
 }
+
+* {
+	font-family: FUENTE;
+	background-color: #fdf9c4;
+  color:black;
+}
+
+h1{
+  text-align:center;
+  font-size:75px;
+}
+
 </style>
